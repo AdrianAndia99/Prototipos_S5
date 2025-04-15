@@ -1,10 +1,24 @@
 using UnityEngine;
-
-public class Run
+public class Run : MonoBehaviour
 {
+    public float runSpeedMultiplier = 2f;
+    private Movement movement;
+
+    void Awake()
+    {
+        movement = GetComponent<Movement>();
+    }
+
     public void Running()
     {
-        Debug.Log("¡El jugador está corriendo!");
-        // Aquí podrías modificar velocidad o animación
+        if (movement != null)
+        {
+            movementSpeed();
+        }
+    }
+
+    private float movementSpeed()
+    {
+        return 5f * runSpeedMultiplier;
     }
 }

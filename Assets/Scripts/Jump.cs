@@ -1,5 +1,6 @@
 using UnityEngine;
-public class Jump : MonoBehaviour
+
+public class Jump : MonoBehaviour 
 {
     private Rigidbody rb;
     private float jumpForce = 7f;
@@ -18,9 +19,5 @@ public class Jump : MonoBehaviour
             canJump = false;
             Debug.Log("¡Salto con fuerza!");
         }
-    }
-    public void AllowJump()
-    {
-        canJump = true;
     }
 }
